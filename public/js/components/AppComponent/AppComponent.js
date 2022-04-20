@@ -1,4 +1,7 @@
+import series from "../../series.js";
 import Component from "../Component/Component.js";
+import SerieComponent from "../SerieComponent/SerieComponent.js";
+import StarComponent from "../StarComponent/StarComponent.js";
 
 class AppComponent extends Component {
   constructor(parentElement) {
@@ -17,13 +20,30 @@ class AppComponent extends Component {
           <h2 class="section-title">Series list</h2>
           <section class="series-pending">
           <h3 class="subsection-title">Pending series</h3>
+          <ul class="series-list">
+          </ul>
           </section>
           <section class="series-watched">
             <h3 class="subsection-title">Watched series</h3>
+            <ul class="series-list">
+          </ul>
           </section>
         </section>
       </main>
     `;
+
+    const pendingSeriesContainer = document.querySelector(
+      ".series-pending .series-list"
+    );
+    const watchedSeriesContainer = document.querySelector(
+      ".series-watched .series-list"
+    );
+
+    series.forEach((serie) =>
+      serie.watched === true
+        ? new SerieComponent(watchedSeriesContainer, serie)
+        : new SerieComponent(pendingSeriesContainer, serie)
+    );
   }
 }
 
