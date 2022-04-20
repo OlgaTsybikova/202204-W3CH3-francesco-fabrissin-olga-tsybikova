@@ -1,5 +1,4 @@
 import Component from "../Component/Component.js";
-import StarComponent from "../StarComponent/StarComponent.js";
 
 class SerieComponent extends Component {
   constructor(parentElement, serie) {

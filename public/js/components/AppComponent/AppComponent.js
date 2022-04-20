@@ -1,7 +1,6 @@
 import series from "../../series.js";
 import Component from "../Component/Component.js";
 import SerieComponent from "../SerieComponent/SerieComponent.js";
-import StarComponent from "../StarComponent/StarComponent.js";
 
 class AppComponent extends Component {
   constructor(parentElement) {
