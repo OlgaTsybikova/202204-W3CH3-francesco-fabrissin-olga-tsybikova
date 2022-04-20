@@ -12,7 +12,7 @@ class SerieComponent extends Component {
 
   render() {
     this.element.innerHTML = `
-     <img
+    <img
                   class="serie__poster"
                   src="https://m.media-amazon.com/images/M/MV5BZGJjYzhjYTYtMDBjYy00OWU1LTg5OTYtNmYwOTZmZjE3ZDdhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg"
                   alt="The Sopranos poster"
@@ -30,3 +30,5 @@ class SerieComponent extends Component {
     }
   }
 }
+
+export default SerieComponent;
