@@ -250,3 +250,5 @@ class AppComponent extends Component {
     `;
   }
 }
+
+export default AppComponent;
