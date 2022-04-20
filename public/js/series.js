@@ -47,7 +47,7 @@ const series = [
     name: "Atypical",
     creator: "Robia Rashid",
     year: 2017,
-    poster: "https://www.cine.com/media/series/2711.jpg",
+    poster: "https://m.media-amazon.com/images/I/81sr1qnO4eL._AC_SL1313_.jpg",
     watched: false,
     score: 0,
     emmies: 0,
