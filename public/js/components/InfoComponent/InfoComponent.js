@@ -2,7 +2,6 @@ import Component from "../Component/Component.js";
 
 class InfoComponent extends Component {
   text;
-  counter;
 
   constructor(parentElement, text) {
     super(parentElement, "p", "info");
