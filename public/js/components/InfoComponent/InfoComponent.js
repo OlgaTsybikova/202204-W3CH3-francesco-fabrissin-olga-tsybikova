@@ -6,6 +6,7 @@ class InfoComponent extends Component {
   constructor(parentElement, text) {
     super(parentElement, "p", "info");
     this.element.textContent = text;
+
     this.render();
   }
 
