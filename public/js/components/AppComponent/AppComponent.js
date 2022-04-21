@@ -2,6 +2,7 @@ import Component from "../Component/Component.js";
 import SerieComponent from "../SerieComponent/SerieComponent.js";
 import InfoComponent from "../InfoComponent/InfoComponent.js";
 import StarComponent from "../StarComponent/StarComponent.js";
+import ButtonComponent from "../ButtonComponent/ButtonComponent.js";
 
 class AppComponent extends Component {
   series;
@@ -73,6 +74,9 @@ class AppComponent extends Component {
         new StarComponent(starsContainers[i], y, () => "hola");
       }
     }
+
+    const buttonIcon = document.querySelectorAll(".serie serie__poster");
+    new ButtonComponent(buttonIcon);
   }
 }
 

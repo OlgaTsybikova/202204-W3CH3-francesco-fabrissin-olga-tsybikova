@@ -7,12 +7,11 @@ class ButtonComponent extends Component {
     super(parentElement, "button", "fas fa-times-circle icon--delete");
     this.action = action;
     this.render();
-    this.addListeners();
   }
 
   render() {
     this.element.innerHTML = `
-    <i class="fas fa-times-circle icon--delete">${this.action}</i>`;
+    <i class="fas fa-times-circle icon--delete" src="./assets/close-button.png">${this.action}</i>`;
   }
 
   addListeners() {
