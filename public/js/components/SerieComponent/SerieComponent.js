@@ -39,10 +39,15 @@ class SerieComponent extends Component {
     const starsContainer = document.querySelector(`#id${this.id}`);
 
     for (let i = 0; i < this.score; i++) {
-      new StarComponent(starsContainer, i, "icon--score fa", () => "hola");
+      new StarComponent(starsContainer, i + 1, "icon--score fa", () => "hola");
     }
     for (let y = 0; y < 5 - this.score; y++) {
-      new StarComponent(starsContainer, y, "icon-score far", () => "hola");
+      new StarComponent(
+        starsContainer,
+        y + this.score + 1,
+        "icon-score far",
+        () => "hola"
+      );
     }
   }
 }
