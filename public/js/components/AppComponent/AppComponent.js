@@ -1,7 +1,6 @@
 import Component from "../Component/Component.js";
 import SerieComponent from "../SerieComponent/SerieComponent.js";
 import InfoComponent from "../InfoComponent/InfoComponent.js";
-import StarComponent from "../StarComponent/StarComponent.js";
 
 class AppComponent extends Component {
   series;
