@@ -1,11 +1,12 @@
 import Component from "../Component/Component.js";
 
 class StarComponent extends Component {
+  starNumber;
   action;
 
-  constructor(parentelement, action) {
-    super(parentelement, "ul", "score");
-
+  constructor(parentelement, starNumber, action) {
+    super(parentelement, "li", "score__star");
+    this.starNumber = starNumber;
     this.action = action;
     this.eventsListener();
     this.render();
@@ -13,21 +14,7 @@ class StarComponent extends Component {
 
   render() {
     this.element.innerHTML = `
-    <li class="score__star">
-                    <i class="icon--score fas fa-star" title="1/5"></i>
-                  </li>
-                  <li class="score__star">
-                    <i class="icon--score fas fa-star" title="2/5"></i>
-                  </li>
-                  <li class="score__star">
-                    <i class="icon--score fas fa-star" title="3/5"></i>
-                  </li>
-                  <li class="score__star">
-                    <i class="icon--score fas fa-star" title="4/5"></i>
-                  </li>
-                  <li class="score__star">
-                    <i class="icon--score fas fa-star" title="5/5"></i>
-                  </li>
+    <i class="icon-score far fa-star" title="${this.starNumber}/5"></i>
     `;
   }
 

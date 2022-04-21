@@ -2,6 +2,8 @@ import series from "../../series.js";
 import Component from "../Component/Component.js";
 import SerieComponent from "../SerieComponent/SerieComponent.js";
 import InfoComponent from "../InfoComponent/InfoComponent.js";
+import StarComponent from "../StarComponent/StarComponent.js";
+
 
 class AppComponent extends Component {
   constructor(parentElement) {
@@ -56,6 +58,14 @@ class AppComponent extends Component {
         ? new SerieComponent(watchedSeriesContainer, serie)
         : new SerieComponent(pendingSeriesContainer, serie)
     );
+
+    const starsContainers = document.querySelectorAll(".score");
+
+    for (let i = 0; i < starsContainers.length; i++) {
+      for (let y = 0; y < 5; y++) {
+        new StarComponent(starsContainers[i], y, () => "hola");
+      }
+    }
   }
 }
 

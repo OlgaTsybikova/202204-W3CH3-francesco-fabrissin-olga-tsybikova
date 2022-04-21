@@ -18,6 +18,8 @@ class SerieComponent extends Component {
                 />
                 <h4 class="serie__title">${this.serie.name}</h4>
                 <p class="serie__info">${this.serie.creator} ${this.serie.year}</p>
+                <ul class="score">
+                </ul>
     `;
   }
 }
