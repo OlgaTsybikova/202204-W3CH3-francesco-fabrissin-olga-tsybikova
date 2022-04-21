@@ -1,17 +1,22 @@
 import Component from "../Component/Component.js";
+import StarComponent from "../StarComponent/StarComponent.js";
 
 class SerieComponent extends Component {
   poster;
   name;
   creator;
   year;
+  score;
+  id;
 
-  constructor(parentElement, { poster, name, creator, year }) {
+  constructor(parentElement, { poster, name, creator, year, score, id }) {
     super(parentElement, "li", "serie");
     this.poster = poster;
     this.name = name;
     this.creator = creator;
     this.year = year;
+    this.score = score;
+    this.id = id;
 
     this.render();
   }
@@ -25,9 +30,18 @@ class SerieComponent extends Component {
                 />
                 <h4 class="serie__title">${this.name}</h4>
                 <p class="serie__info">${this.creator} ${this.year}</p>
-                <ul class="score">
+                <ul class="score" id=id${this.id}>
                 </ul>
     `;
+
+    const starsContainer = document.querySelector(`#id${this.id}`);
+
+    for (let i = 0; i < this.id; i++) {
+      new StarComponent(starsContainer, i, "icon--score fa", () => "hola");
+    }
+    for (let y = 0; y < 5 - this.id; y++) {
+      new StarComponent(starsContainer, y, "icon-score far", () => "hola");
+    }
   }
 }
 
