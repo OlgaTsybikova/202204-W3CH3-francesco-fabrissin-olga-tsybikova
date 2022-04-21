@@ -2,14 +2,16 @@ import Component from "../Component/Component.js";
 
 class InfoComponent extends Component {
   text;
+  seriesNumber;
 
-  constructor(parentElement) {
+  constructor(parentElement, seriesNumber) {
     super(parentElement, "p", "info");
+    this.seriesNumber = seriesNumber;
     this.render();
   }
 
   render() {
-    this.element.textContent = "You have 4 series pending to watch";
+    this.element.innerHTML = this.seriesNumber;
   }
 }
 export default InfoComponent;

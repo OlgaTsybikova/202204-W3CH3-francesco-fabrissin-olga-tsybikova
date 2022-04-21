@@ -41,9 +41,17 @@ class AppComponent extends Component {
       ".info-container--watched"
     );
 
-    new InfoComponent(infoPendingContainer);
+    const watchedSeriesCounter = this.series.filter((serie) => serie.watched);
+    const pendingSeriesCounter = this.series.filter((serie) => !serie.watched);
 
-    new InfoComponent(infoWatchedContainer);
+    new InfoComponent(
+      infoPendingContainer,
+      `You have ${pendingSeriesCounter.length} series pending to watch:`
+    );
+    new InfoComponent(
+      infoWatchedContainer,
+      `You have already watched ${watchedSeriesCounter.length} series! Keep up!`
+    );
 
     const pendingSeriesContainer = document.querySelector(
       ".series-pending .series-list"
