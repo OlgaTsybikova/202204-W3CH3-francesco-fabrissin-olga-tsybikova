@@ -11,7 +11,7 @@ class ButtonComponent extends Component {
 
   render() {
     this.element.innerHTML = `
-    <i class="fas fa-times-circle icon--delete" src="./assets/close-button.png">${this.action}</i>`;
+    <i class=${"fas fa-times-circle icon--delete"}></i>`;
   }
 
   addListeners() {
