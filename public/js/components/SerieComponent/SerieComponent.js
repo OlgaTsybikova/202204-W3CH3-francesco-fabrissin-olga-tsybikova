@@ -32,6 +32,8 @@ class SerieComponent extends Component {
                 <p class="serie__info">${this.creator} ${this.year}</p>
                 <ul class="score" id=id${this.id}>
                 </ul>
+                <i class="fas fa-times-circle icon--delete"></i>
+                
     `;
 
     const starsContainer = document.querySelector(`#id${this.id}`);
