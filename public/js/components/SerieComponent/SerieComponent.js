@@ -42,7 +42,6 @@ class SerieComponent extends Component {
     for (let y = 0; y < 5 - this.score; y++) {
       new StarComponent(starsContainer, y, "icon-score far", () => "hola");
     }
-    console.log(this.score);
   }
 }
 
