@@ -6,4 +6,5 @@
 - Info
 - Series
 - Stars
+- Star
 - Button

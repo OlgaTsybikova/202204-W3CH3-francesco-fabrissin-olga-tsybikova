@@ -12,7 +12,7 @@ class ButtonComponent extends Component {
 
   render() {
     this.element.innerHTML = `
-    <i class="fas fa-times-circle icon--delete"></i>`;
+    <i class="fas fa-times-circle icon--delete">${this.action}</i>`;
   }
 
   addListeners() {
