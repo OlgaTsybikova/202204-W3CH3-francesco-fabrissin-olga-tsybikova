@@ -1,14 +1,13 @@
-import series from "../../series.js";
 import Component from "../Component/Component.js";
 import SerieComponent from "../SerieComponent/SerieComponent.js";
 import InfoComponent from "../InfoComponent/InfoComponent.js";
 import StarComponent from "../StarComponent/StarComponent.js";
 
-
 class AppComponent extends Component {
-  constructor(parentElement) {
+  series;
+  constructor(parentElement, series) {
     super(parentElement, "div", "container");
-
+    this.series = series;
     this.render();
   }
 
@@ -53,8 +52,8 @@ class AppComponent extends Component {
       ".series-watched .series-list"
     );
 
-    series.forEach((serie) =>
-      serie.watched === true
+    this.series.forEach((serie) =>
+      serie.watched
         ? new SerieComponent(watchedSeriesContainer, serie)
         : new SerieComponent(pendingSeriesContainer, serie)
     );
