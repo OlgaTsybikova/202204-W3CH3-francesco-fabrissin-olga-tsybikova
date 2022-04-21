@@ -1,10 +1,17 @@
 import Component from "../Component/Component.js";
 
 class SerieComponent extends Component {
-  constructor(parentElement, serie) {
-    super(parentElement, "li", "serie");
+  poster;
+  name;
+  creator;
+  year;
 
-    this.serie = serie;
+  constructor(parentElement, { poster, name, creator, year }) {
+    super(parentElement, "li", "serie");
+    this.poster = poster;
+    this.name = name;
+    this.creator = creator;
+    this.year = year;
 
     this.render();
   }
@@ -13,11 +20,11 @@ class SerieComponent extends Component {
     this.element.innerHTML = `
     <img
                   class="serie__poster"
-                  src= ${this.serie.poster}
-                  alt="${this.serie.name} poster"
+                  src= ${this.poster}
+                  alt="${this.name} poster"
                 />
-                <h4 class="serie__title">${this.serie.name}</h4>
-                <p class="serie__info">${this.serie.creator} ${this.serie.year}</p>
+                <h4 class="serie__title">${this.name}</h4>
+                <p class="serie__info">${this.creator} ${this.year}</p>
                 <ul class="score">
                 </ul>
     `;
