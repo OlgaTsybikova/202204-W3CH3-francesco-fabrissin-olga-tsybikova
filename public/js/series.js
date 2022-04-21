@@ -18,7 +18,7 @@ const series = [
     poster:
       "https://t1.pixers.pics/img-1fb6f67c/posters-game-of-thrones.jpg?H4sIAAAAAAAAA3VOW27EIAy8DpGS2BAIkBvs394gIjy2afNAQNtVT1_Sqp-VZXs80ngG3o9sggfrj-IT7Ktzm4ewbvXKU_J5_fJkUGOLzVTZjSBWdH74ZNMZSUcH1VLRCsbaUYpm-jRVuJv0Rl5KiXkCyEMf12f9VpfNYPcMDKkEVCC00lpYzh1aN8cuF3M4k1zH8TliH49Hi1c1f0EkYiuvACWtO6mJzupVyGt8NPCP3y-GqoL7DSgCsp-JwNnFzvcbRWS1kbNZuEELHox0izdBeoUYLBVej9qZEMIsFmmWRY7Kec_n_hu83S9APwEAAA==",
     watched: false,
-    score: 0,
+    score: 2,
     emmies: 164,
   },
   {
@@ -39,7 +39,7 @@ const series = [
     year: 2001,
     poster: "https://www.cine.com/media/series/2711.jpg",
     watched: true,
-    score: 5,
+    score: 4,
     emmies: 53,
   },
   {
@@ -49,7 +49,7 @@ const series = [
     year: 2017,
     poster: "https://m.media-amazon.com/images/I/81sr1qnO4eL._AC_SL1313_.jpg",
     watched: false,
-    score: 0,
+    score: 1,
     emmies: 0,
   },
 ];
